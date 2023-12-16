@@ -2,19 +2,19 @@ const express = require('express');
 const router = express.Router();
 const projectController = require('../controllers/project.controller');
 
-// POST route to create a new project
-router.post('/', projectController.createProject);
+// Route to get all projects
+router.get('/projects', projectController.getAllProjects);
 
-// GET route to retrieve all projects
-router.get('/', projectController.getAllProjects);
+// Route to get a single project by ID
+router.get('/projects/:id', projectController.getProjectById);
 
-// GET route to retrieve a specific project by id
-router.get('/:id', projectController.getProjectById);
+// Route to create a new project
+router.post('/projects', projectController.createProject);
 
-// PUT route to update a specific project by id
-router.put('/:id', projectController.updateProject);
+// Route to update a project by ID
+router.put('/projects/:id', projectController.updateProject);
 
-// DELETE route to delete a specific project by id
-router.delete('/:id', projectController.deleteProject);
+// Route to delete a project by ID
+router.delete('/projects/:id', projectController.deleteProject);
 
 module.exports = router;

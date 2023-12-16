@@ -1,13 +1,25 @@
 const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
-    title: { type: String, required: true },
-    description: { type: String, required: true },
-    technologies: [String],
-    githubLink: { type: String, required: true },
-    image: String // Optional: URL to a screenshot or media related to the project
-});
+    title: {
+        type: String,
+        required: [true, "Title is required"],
+        trim: true
+    },
+    description: {
+        type: String,
+        required: [true, "Description is required"],
+        trim: true
+    },
+    technologies: {
+        type: [String],
+        required: [true, "Technologies are required"]
+    },
+    githubLink: {
+        type: String,
+        required: [true, "GitHub link is required"],
+        trim: true
+    }
+}, { timestamps: true });
 
-const Project = mongoose.model('Project', ProjectSchema);
-
-module.exports = Project;
+module.exports = mongoose.model('Project', ProjectSchema);

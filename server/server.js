@@ -1,5 +1,22 @@
-const app = require('./app');
+const express = require('express');
+const app = express();
+const cors = require('cors');
+const port = 8000;
 
-const port = process.env.PORT || 8000;
+// Require mongoose configuration
+require('./config/mongoose.config');
 
-app.listen(port, () => {console.log(`Server is running on port ${port}`)});
+// Middlewares
+app.use(cors()); 
+app.use(express.json());
+
+// Require routes
+const projectRoutes = require('./routes/project.routes');
+const userRoutes = require('./routes/user.routes');
+
+// Use routes
+app.use('/api', projectRoutes);
+app.use('/api', userRoutes);
+
+// Starting the server
+app.listen(port, () => console.log(`Listening on port: ${port}`));

@@ -1,54 +1,65 @@
 const Project = require('../models/project.model');
 
-// Create a new project
-exports.createProject = async (req, res) => {
-    try {
-        const newProject = new Project(req.body);
-        await newProject.save();
-        res.status(201).json(newProject);
-    } catch (error) {
-        res.status(400).json({ message: error.message });
+const projectController = {
+    // Get All Projects
+    getAllProjects: async (req, res) => {
+        try {
+            const projects = await Project.find();
+            res.json(projects);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
+    },
+
+    // Get Project by ID
+    getProjectById: async (req, res) => {
+        try {
+            const project = await Project.findById(req.params.id);
+            if (!project) {
+                return res.status(404).json({ error: 'Project not found' });
+            }
+            res.json(project);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
+    },
+
+    // Create a New Project
+    createProject: async (req, res) => {
+        try {
+            const newProject = new Project(req.body);
+            await newProject.save();
+            res.status(201).json(newProject);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
+    },
+
+    // Update a Project
+    updateProject: async (req, res) => {
+        try {
+            const updatedProject = await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
+            if (!updatedProject) {
+                return res.status(404).json({ error: 'Project not found' });
+            }
+            res.json(updatedProject);
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
+    },
+
+    // Delete a Project
+    deleteProject: async (req, res) => {
+        try {
+            const deletedProject = await Project.findByIdAndDelete(req.params.id);
+            if (!deletedProject) {
+                return res.status(404).json({ error: 'Project not found' });
+            }
+            res.json({ message: 'Project deleted successfully' });
+        } catch (err) {
+            res.status(400).json({ error: err.message });
+        }
     }
 };
 
-// Get all projects
-exports.getAllProjects = async (req, res) => {
-    try {
-        const projects = await Project.find();
-        res.json(projects);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
-
-// Get a single project by id
-exports.getProjectById = async (req, res) => {
-    try {
-        const project = await Project.findById(req.params.id);
-        if (!project) return res.status(404).json({ message: 'Project not found' });
-        res.json(project);
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
-
-// Update a project
-exports.updateProject = async (req, res) => {
-    try {
-        const updatedProject = await Project.findByIdAndUpdate(req.params.id, req.body, { new: true });
-        res.json(updatedProject);
-    } catch (error) {
-        res.status(400).json({ message: error.message });
-    }
-};
-
-// Delete a project
-exports.deleteProject = async (req, res) => {
-    try {
-        const project = await Project.findByIdAndDelete(req.params.id);
-        if (!project) return res.status(404).json({ message: 'Project not found' });
-        res.json({ message: 'Project deleted successfully' });
-    } catch (error) {
-        res.status(500).json({ message: error.message });
-    }
-};
+module.exports = projectController;

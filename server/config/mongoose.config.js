@@ -1,10 +1,8 @@
 const mongoose = require('mongoose');
 
-const connectDB = () => {
-    mongoose.connect("mongodb://127.0.0.1:27017/grahamPortfolio", {})
-    
-    .then(() => console.log("Established a connection to the database"))
-    .catch(err => console.log("Something went wrong when connecting to the database", err));
-};
+const DB_URI = "mongodb://127.0.0.1:27017/grahamPortfolio";
 
-module.exports = connectDB;
+mongoose.connect(DB_URI, {})
+
+.then(() => console.log("Established a connection to the database"))
+.catch(err => console.log("Something went wrong when connecting to the database", err));
