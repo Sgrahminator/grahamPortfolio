@@ -1,7 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
+  background-color: #faf0f0; 
+  font-family: 'Open Sans', sans-serif; 
 }
 
+.bold-text {
+  font-weight: bold;
+}
+
+nav {
+  background: linear-gradient(to right, #c2a6f5, #9e9b9b); 
+  color: white;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); 
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; 
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0 15px; 
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; 
+  font-size: 1.1em; 
+  position: relative; 
+  transition: color 0.3s, transform 0.3s; 
+}
+
+nav ul li a:hover {
+  color: #ff6600;
+  transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; 
+    padding-top: 10px;
+  }
+
+  nav ul li {
+    margin: 5px 0; 
+  }
+}
+
+nav ul li a.active {
+  border-bottom: 2px solid #ff6600; 
+}
+
+
+.img-size {
+  max-width: 300px; 
+  height: auto;
+  display: block;
+  margin: 0 auto; 
+}
+
+.contact-card, .project-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  margin: 20px auto; 
+  background-color: #ffffff; 
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover, .project-card:hover {
+  transform: scale(1.03); 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+}
+
+.contact-card h3, .project-card h3 {
+  margin-top: 0;
+}
+
+.contact-card a, .project-card a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+}
+
+p {
+  font-family: 'Georgia', serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.resume_download {
+  background: #c2a6f5; 
+  color: black; 
+  padding: 15px 32px; 
+  border: none; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  font-size: 16px; 
+  transition: background-color 0.3s ease; 
+}
+
+.resume_download:hover {
+  background-color: #9e9b9b; 
+}
