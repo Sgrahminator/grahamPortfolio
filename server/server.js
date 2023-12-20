@@ -3,15 +3,15 @@ const app = express();
 const cors = require('cors');
 
 // Require mongoose configuration
-require('./server/config/mongoose.config');
+require('./config/mongoose.config');
 
 // Middlewares
 app.use(cors()); 
 app.use(express.json());
 
 // Require routes
-const projectRoutes = require('./server/routes/project.routes');
-const userRoutes = require('./server/routes/user.routes');
+const projectRoutes = require('./routes/project.routes');
+const userRoutes = require('./routes/user.routes');
 
 // Use routes
 app.use('/api', projectRoutes);
