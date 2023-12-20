@@ -71,7 +71,7 @@ const HomePage = () => {
                 ever-evolving world of web development!
             </p>
             <h2>My Projects</h2>
-            <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Sarah Graham</a></h4>
+            <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
             <div>
                 {projects.map(project => (
                     <ProjectCard key={project._id} project={project} />
