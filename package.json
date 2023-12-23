@@ -6,15 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "install": "cd server && npm install",
     "postinstall": "npm run build --prefix client"
   },
-  
   "keywords": [],
   "author": "",
   "license": "ISC",
   "engines": {
-    "node": "20.10.0"
+    "node": "20.10.0",
+    "npm": "8.x"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -22,9 +21,9 @@
     "heroku": "^8.7.1",
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.3",
-    "node": "^20.10.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.1"
   }
 }
+
