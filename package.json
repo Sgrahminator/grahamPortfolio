@@ -9,6 +9,7 @@
     "install": "cd server && npm install",
     "postinstall": "npm run build --prefix client"
   },
+  
   "keywords": [],
   "author": "",
   "license": "ISC",
