@@ -1,12 +1,16 @@
 {
   "name": "grahamportfolio",
   "version": "1.0.0",
-  "description": "My goal here is to get a working portfolio page. I will be adding to it and scaling it up as I go. This version is my MVP version.",
+  "description": "My goal here is to deploy a working portfolio page. I will be adding to it and scaling it up as I go. This version is my MVP version.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
-    "postinstall": "npm run build --prefix client"
+    "postinstall": "npm run build --prefix client",
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
