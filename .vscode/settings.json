@@ -9,6 +9,7 @@
         "noopener",
         "noreferrer",
         "pdfs",
+        "postbuild",
         "predeploy",
         "rdquo",
         "transformative"
