@@ -67,23 +67,21 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
   body h1, body h2, body h3, body h4 {
-    color: #333; /* Updated for light theme with increased specificity */
-    background-color: #333;
+    color: #333; /* Light theme color */
   }
 }
 
 @media (prefers-color-scheme: dark) {
   body h1, body h2, body h3, body h4 {
-    color: #333; /* Updated for dark theme with increased specificity */
-    background-color: #333;
+    color: #333; /* Dark theme color */
   }
 }
 
 @media (max-width: 768px) {
   body h1, body h2, body h3, body h4 {
-    color: #333; /* Updated for mobile devices with increased specificity */
-    background-color: #333;
+    color: #333; /* Mobile devices color */
   }
 }
+
 
 
