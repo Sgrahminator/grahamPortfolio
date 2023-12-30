@@ -98,6 +98,7 @@ nav ul li a.active {
 h1, h2, h3, h4 {
   text-align: center;
   font-family: 'Arial', sans-serif;
+  color: #333;
 }
 
 p {
