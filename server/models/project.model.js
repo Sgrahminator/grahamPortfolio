@@ -13,7 +13,8 @@ const ProjectSchema = new mongoose.Schema({
     },
     technologies: {
         type: [String],
-        required: [true, "Technologies are required"]
+        required: [true, "Technologies are required"],
+        default: []
     },
     githubLink: {
         type: String,
