@@ -66,20 +66,21 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-  h1, h2, h3, h4 {
-    color: #333; /* Updated for light theme */
+  body h1, body h2, body h3, body h4 {
+    color: #333; /* Updated for light theme with increased specificity */
   }
 }
 
 @media (prefers-color-scheme: dark) {
-  h1, h2, h3, h4 {
-    color: #333; /* Updated for dark theme */
+  body h1, body h2, body h3, body h4 {
+    color: #333; /* Updated for dark theme with increased specificity */
   }
 }
 
 @media (max-width: 768px) {
-  h1, h2, h3, h4 {
-    color: #333; /* Updated for mobile devices */
+  body h1, body h2, body h3, body h4 {
+    color: #333; /* Updated for mobile devices with increased specificity */
   }
 }
+
 
