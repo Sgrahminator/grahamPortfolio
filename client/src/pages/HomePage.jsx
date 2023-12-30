@@ -73,9 +73,13 @@ const HomePage = () => {
             <h2>My Projects</h2>
             <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
             <div>
-                {projects.map(project => (
-                    <ProjectCard key={project._id} project={project} />
-                ))}
+                {projects.length > 0 ? (
+                    projects.map(project => (
+                        <ProjectCard key={project._id} project={project} />
+                    ))
+                ) : (
+                    <p>No projects available at the moment.</p>
+                )}
             </div>
         </div>
     );
