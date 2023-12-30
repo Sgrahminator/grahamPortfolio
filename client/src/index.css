@@ -68,18 +68,21 @@ button:focus-visible {
   }
   body h1, body h2, body h3, body h4 {
     color: #333; /* Updated for light theme with increased specificity */
+    background-color: #333;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   body h1, body h2, body h3, body h4 {
     color: #333; /* Updated for dark theme with increased specificity */
+    background-color: #333;
   }
 }
 
 @media (max-width: 768px) {
   body h1, body h2, body h3, body h4 {
     color: #333; /* Updated for mobile devices with increased specificity */
+    background-color: #333;
   }
 }
 

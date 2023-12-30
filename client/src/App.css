@@ -59,6 +59,7 @@ nav ul li a:hover {
 
   h1, h2, h3, h4 {
     color: #333; /* Added for mobile devices */
+    background-color: #333;
   }
 }
 
@@ -102,6 +103,7 @@ h1, h2, h3, h4 {
   text-align: center;
   font-family: 'Arial', sans-serif;
   color: #333;
+  background-color: #333;
 }
 
 p {
