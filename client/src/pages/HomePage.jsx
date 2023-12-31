@@ -1,16 +1,7 @@
-import { useState, useEffect } from 'react';
-import ProjectCard from '../components/ProjectCard';
+
 
 const HomePage = () => {
-    const [projects, setProjects] = useState([]);
-
-    // Fetch projects from your backend
-    useEffect(() => {
-        fetch('/api/projects')
-            .then(response => response.json())
-            .then(data => setProjects(data))
-            .catch(error => console.error('Error fetching projects:', error));
-    }, []);
+    
 
     return (
         <div>
@@ -72,15 +63,6 @@ const HomePage = () => {
             </p>
             <h2>My Projects</h2>
             <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
-            <div>
-                {projects.length > 0 ? (
-                    projects.map(project => (
-                        <ProjectCard key={project._id} project={project} />
-                    ))
-                ) : (
-                    <p>No projects available at the moment.</p>
-                )}
-            </div>
         </div>
     );
 };
