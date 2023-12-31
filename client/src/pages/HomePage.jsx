@@ -61,7 +61,6 @@ const HomePage = () => {
                 Join me on this exciting journey as I continue to grow, innovate, and contribute to the 
                 ever-evolving world of web development!
             </p>
-            <h2>My Projects</h2>
             <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
         </div>
     );
