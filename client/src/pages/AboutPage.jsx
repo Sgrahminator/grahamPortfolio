@@ -70,7 +70,7 @@ const AboutPage = () => {
             </p>
             <ContactCard />
             <h4>
-                <a href="/pdfs/SARAH_GRAHAM.pdf" download>
+                <a href="pdfs\Sarah_Graham_Resume_2024.pdf" download>
                     <button className="resume_download">Download Resume</button>
                 </a>
             </h4>
