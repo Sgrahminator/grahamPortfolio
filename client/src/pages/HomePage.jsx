@@ -34,8 +34,8 @@ const HomePage = () => {
             </div>
             <h3>Meet Sarah Graham, a Versatile Web Developer with a Passion for Impact</h3>
             <p>
-                Hello! I&apos;m Sarah Graham, a Web Developer with a zeal for both front and back-end coding. My 
-                journey in tech was turbocharged by an intense 8-month, 3-stack coding bootcamp with Coding 
+                Hello! I&apos;m Sarah, a Web Developer with a zeal for both front and back-end coding. My 
+                journey in tech was turbocharged by an intense 8-month, 3-stack coding bootcamp at Coding 
                 Dojo, where I honed my skills in MERN Full Stack and Java. My aspiration? To create 
                 meaningful projects that resonate with users and make a real difference.
                 <br></br>
