@@ -63,7 +63,8 @@ const HomePage = () => {
             <h2>My Projects</h2>
             <p>
             You can view my projects through the Github link below. Most are class assignments, with some 
-            personal projects mixed in.
+            personal projects mixed in. I am currently working on a personal project using the MERN stack,
+            and will be adding that to my portfolio soon. Stay tuned!
             </p>
             <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
         </div>
