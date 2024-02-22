@@ -46,7 +46,9 @@ const HomePage = () => {
                 functional, but also user-centric.
                 <br></br>
                 <br></br>
-                As someone who lives by the mantra &ldquo;work smarter, not harder,&rdquo; I am constantly exploring ways to innovate and streamline processes. I am enthusiastic about every project I take on, always eager to learn more and push the boundaries of what’s possible.
+                As someone who lives by the mantra &ldquo;work smarter, not harder,&rdquo; I am constantly 
+                exploring ways to innovate and streamline processes. I am enthusiastic about every project I 
+                take on, always eager to learn more and push the boundaries of what’s possible.
                 <br></br>
                 <br></br>
                 Though I&apos;m still on the lookout for that first big accolade in the tech world, my drive 
@@ -59,6 +61,10 @@ const HomePage = () => {
                 ever-evolving world of web development!
             </p>
             <h2>My Projects</h2>
+            <p>
+            You can view my projects through the Github link below. Most are class assignments, with some 
+            personal projects mixed in.
+            </p>
             <h4>Github <a href="https://github.com/Sgrahminator" target="_blank" rel="noopener noreferrer">Click Here</a></h4>
         </div>
     );
